@@ -40,8 +40,7 @@ const config = {
                         loader: 'url-loader',
                         options: {
                             limit: 1024,     // 默认是打包到另一个文件，如果超过1024则转成base64
-                            name: 'imgaes/[name]-aaa.[ext]',
-                            publicPath: 'dist/'
+                            name: 'images/[name]-aaa.[ext]'
                         }
                     }
                 ]
@@ -51,7 +50,7 @@ const config = {
     plugins: [
         new webpack.DefinePlugin({
            'process.env': {
-               NODE_ENV: isDev ?  '"development"' : '"development"'
+               NODE_ENV: isDev ?  '"development"' : '"production"'
            }
         }),
         new HTMLPlugin()
