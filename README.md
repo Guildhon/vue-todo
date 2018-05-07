@@ -19,5 +19,9 @@ css-loader配置style-loader会把css打包到js里
 
 style-loader依赖stylus
 
+cross-env设置环境变量，在package.json里面script设置，在webpack.config.js里面判断
+
+html-webpack-plugin会自动生成一个html入口文件，并引用相关的文件
+
 
 
