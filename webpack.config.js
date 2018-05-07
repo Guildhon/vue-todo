@@ -9,8 +9,28 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.vue$/,
+                test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(gif|jpg|jpeg|png|svg)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 1024,     // 默认是打包到另一个文件，如果超过1024则转成base64
+                            name: 'imgaes/[name]-aaa.[ext]',
+                            publicPath: 'dist/'
+                        }
+                    }
+                ]
             }
         ]
     }

@@ -11,5 +11,11 @@ npm run build
 
 在webpack.config里面__dirname是指当前的目录
 
+url-loader需要file-loader
+
+vue-loader需要vue-template-compiler
+
+css-loader配置style-loader会把css打包到js里
+
 
 
