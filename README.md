@@ -17,5 +17,7 @@ vue-loader需要vue-template-compiler
 
 css-loader配置style-loader会把css打包到js里
 
+style-loader依赖stylus
+
 
 
