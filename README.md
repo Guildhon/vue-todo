@@ -25,3 +25,7 @@ html-webpack-plugin会自动生成一个html入口文件，并引用相关的文
 
 postcss-loader依赖autoprefixer，给css加兼容前缀
 
+babel-preset-env是babel转码
+
+transform-vue-jsx转化vue里面的jsx
+
