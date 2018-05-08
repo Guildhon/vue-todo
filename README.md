@@ -1,4 +1,4 @@
-# vue-to
+# vue-todo
 
 npm install
 
@@ -28,4 +28,6 @@ postcss-loader依赖autoprefixer，给css加兼容前缀
 babel-preset-env是babel转码
 
 transform-vue-jsx转化vue里面的jsx
+
+extract-text-webpack-plugin把非javascript的文件单独打包
 
