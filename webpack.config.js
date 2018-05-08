@@ -85,6 +85,10 @@ if (isDev) {
         new webpack.NoEmitOnErrorsPlugin()
     )
 } else {
+    config.entry = {
+        app: path.join(__dirname, 'src/index.js'),
+        vendor: ['vue']                        // 将框架库文件单独打包到一起
+    }
     config.output.filename = '[name].[chunkhash:8].js'
     config.module.rules.push(
         {
@@ -105,7 +109,13 @@ if (isDev) {
         }
     )
     config.plugins.push(
-        new ExtractPlugin('styles.[contentHash:8].css')
+        new ExtractPlugin('styles.[contentHash:8].css'),
+        new webpack.optimize.CommonsChunkPlugin({       // 将框架库文件单独打包到一起
+            name: 'vendor'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({           // webpack文件单独打包到一起
+            name: 'runtime'
+        })
     )
 }
 
