@@ -23,5 +23,6 @@ cross-env设置环境变量，在package.json里面script设置，在webpack.con
 
 html-webpack-plugin会自动生成一个html入口文件，并引用相关的文件
 
+postcss-loader依赖autoprefixer，给css加兼容前缀
 
 
